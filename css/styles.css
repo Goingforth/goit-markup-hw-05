@@ -12,6 +12,7 @@
 /* цвет нижней рамки хэдера #ECECEC 1px */
 /* цвет иконок team  #AFB1B8*/
 /* фоновый цвет иконок футера rgba(255, 255, 255, 0.1)*/
+/* фоновый цвет текста в секции чем мы занимаемся rgba(47, 48, 58, 0.8)*/
 :root {
   --header-color: #212121;
   --p-color: #757575;
@@ -26,6 +27,7 @@
   --border-botton-header: #ececec;
   --color-icon-team: #afb1b8;
   --color-background-icon-footer: rgba(255, 255, 255, 0.1);
+  --color-background-fone-examples: rgba(47, 48, 58, 0.8);
 }
 body {
   color: var(--header-color);
@@ -236,6 +238,23 @@ img {
   margin-right: 30px;
 }
 
+.example-image {
+  position: relative;
+}
+.example-image-tytle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  background-color: var(--color-background-fone-examples);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--h1-footer-color);
+}
 .section-tytle {
   font-size: 14px;
   line-height: 1.14;
