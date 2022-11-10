@@ -16,6 +16,8 @@
 /* цвет оверлея портфолио rgba(33, 150, 243, 0.9)*/
 /* время перехода ховера и фокуса 250ms*/
 /*  функция распределения времени cubic-bezier(0.4, 0, 0.2, 1)*/
+/* цвет backdrop rgba(0, 0, 0, 0.2) */
+/* цвет кнопки закрытия модалки rgba(0, 0, 0, 0.1)*/
 :root {
   --header-color: #212121;
   --p-color: #757575;
@@ -34,6 +36,8 @@
   --overlay-portfolio: rgba(33, 150, 243, 0.9);
   --time-hover: 250ms;
   --function-time: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-backdrop: rgba(0, 0, 0, 0.2);
+  --close-modal: rgba(0, 0, 0, 0.1);
 }
 body {
   color: var(--header-color);
@@ -661,3 +665,60 @@ footer .logo {
 .address.click a:focus {
   color: var(--h1-footer-color);
 }
+/* Модальное окно  */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-backdrop);
+
+  opacity: 1;
+  transition: opacity var(--time-hover) var(--function-time);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+  background-color: var(--h1-footer-color);
+
+  transform: translate(-50%, -50%) scale(1);
+
+  opacity: 1;
+
+  transition: transform var(--time-hover) var(--function-time),
+    opacity var(--time-hover) var(--function-time);
+}
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  font-size: 18px;
+  color: #000;
+
+  border: 1px solid var(--close-modal);
+  background-color: var(--h1-footer-color);
+
+  cursor: pointer;
+}
+/*  end Модальное окно  */

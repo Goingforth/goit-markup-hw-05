@@ -56,7 +56,9 @@
       <section class="hero">
         <div class="overlay">
           <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button order" type="button">Замовити послугу</button>
+          <button data-modal-open class="button order" type="button">
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Section : Особливости-->
@@ -452,6 +454,13 @@
         </div>
       </div>
     </footer>
+    <!-- Модальное окно  -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="modal-button">x</button>
+      </div>
+    </div>
+    <!--  end Модальное окно  -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
